@@ -1,0 +1,18 @@
+@import "left";
+@import "right";
+
+
+#messages{
+  display: block;
+  overflow-y: auto;
+}
+.msg{
+  word-wrap: break-word;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Quicksand', sans-serif;
+}
+.time{
+  color: $purple;
+  text-align: center;
+}

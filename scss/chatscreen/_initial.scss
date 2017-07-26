@@ -1,0 +1,21 @@
+.ion-arrow-left-b{
+  position: absolute;
+  left: 25px;
+  top:25px;
+  color: #fff;
+}
+.initial{
+  margin-bottom: 2px;
+  border-bottom: 1px solid $white;
+  z-index: 10;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.96);
+  /* position: fixed; */
+  /* top: 0; */
+}
+.title{
+  color: $white;
+  text-align: center;
+  top: 50%;
+  font-family: 'Quicksand', sans-serif;
+}

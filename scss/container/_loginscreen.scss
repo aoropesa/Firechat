@@ -1,0 +1,24 @@
+#login{
+ align-self: center;
+ font-size: 1.2rem;
+ font-family: 'Montserrat', sans-serif;
+ background-color: $purple;
+ height: 3rem;
+ width: 300px;
+ font-weight: bold;
+ border-width: 0;
+}
+
+#login-screen{
+ flex:1;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ background-color: $black;
+ text-align: center;
+}
+@media (max-width: 600px) {
+  #login {
+    width: 200px;
+  }
+}

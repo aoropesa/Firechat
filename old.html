@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="login">
+
+  </div>
+  <div id="chat">
+    <div id="messages">
+
+    </div>
+    <div>
+      message: <input type="text" id="message-input">
+      <button id="send-message">Send!</button>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCxZ-qJG6O2hdB9nFbCkL-gQSZdOnhoMPs",
+    authDomain: "firechat-c578b.firebaseapp.com",
+    databaseURL: "https://firechat-c578b.firebaseio.com",
+    projectId: "firechat-c578b",
+    storageBucket: "firechat-c578b.appspot.com",
+    messagingSenderId: "196201020797"
+  };
+  firebase.initializeApp(config);
+  var user = "user@loqtuquieras.com";
+  document.getElementById('send-message').addEventListener('click', function(){
+  firebase.database().ref().push({
+      username: user,
+      message: document.getElementById('message-input').value
+   })
+   .then(res=>console.log(res));
+  })
+
+  firebase.database().ref().on("value", function(snapshot){
+    console.log(snapshot.val());
+    var msgDiv = document.getElementById('messages')
+    var messages = snapshot.val();
+    var appendstr = '';
+    for(k in messages){
+      appendstr+=`<h3>${messages[k].username}:${messages[k].message}</h3>`
+    }
+    msgDiv.innerHTML = appendstr;
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+@import "initial";
+@import "send";
+@import "sendmessage";
+
+#chat-screen{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: $black;
+}

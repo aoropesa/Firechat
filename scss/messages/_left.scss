@@ -1,0 +1,20 @@
+.left{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.left .img{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+.left .text{
+  text-align: right;
+  margin-bottom: 10px;
+  background-color: $white;
+  width: 65%;
+  height: auto;
+  margin-right: 20px;
+}
